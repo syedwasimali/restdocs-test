@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller
 {
-    @RequestMapping(value="/v1/info", method = RequestMethod.GET,
+    @RequestMapping(value="/info", method = RequestMethod.GET,
             produces = "application/json")
     @ResponseBody
     Info getInfo()

@@ -1,6 +1,5 @@
 package com.example;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -19,7 +18,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.modifyParameters;
 import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessResponse;
 import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
@@ -62,7 +60,7 @@ public class ControllerTest
          * The ObjectMapper is baked within.
          */
 
-        String uri = "/v1/info";
+        String uri = "/info";
 
         MvcResult result = mockMvc.
                 perform(MockMvcRequestBuilders.get(uri).
@@ -82,7 +80,7 @@ public class ControllerTest
          *
          */
 
-        String uri = "/v1/info";
+        String uri = "/info";
 
         MvcResult result = mockMvc.
                 perform(MockMvcRequestBuilders.get(uri).

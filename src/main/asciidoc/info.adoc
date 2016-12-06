@@ -1,0 +1,24 @@
+= Test RESTDocs generated document
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+[overview]
+= Overview
+
+This is an example document.
+
+== Pretty Print Example
+
+There is no way to leverage other Jackson attributes like JsonInclude.Include.NON_NULL. The ObjectMapper is baked within.
+
+include::{snippets}/test-1-pretty-print/http-response.adoc[]
+
+== "ignored" Not Working
+
+Documentation notes that "If you do not want to document a field, you can mark it as ignored". However, this doesn't appear to be working as such.
+
+include::{snippets}/test-1-ignored/http-response.adoc[]
